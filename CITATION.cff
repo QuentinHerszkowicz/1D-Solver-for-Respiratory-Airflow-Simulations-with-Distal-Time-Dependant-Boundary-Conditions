@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: >-
+  If you use this software, please cite the associated article
+  (doi:10.46298/mbj.19176) and the original SimVascular paper.
+title: >-
+  1D Solver for Respiratory Airflow Simulations with Distal
+  Time-Dependent Boundary Conditions
+type: software
+authors:
+  - given-names: Quentin
+    family-names: Herszkowicz
+repository-code: >-
+  https://github.com/QuentinHerszkowicz/1D-Solver-for-Respiratory-Airflow-Simulations-with-Distal-Time-Dependant-Boundary-Conditions
+license: MIT
+keywords:
+  - respiratory airflow
+  - bronchial tree
+  - 1D model
+  - finite element
+references:
+  - type: software
+    title: svOneDSolver
+    authors:
+      - name: SimVascular
+    repository-code: https://github.com/SimVascular/svOneDSolver
+  - type: article
+    title: "SimVascular: An open source pipeline for cardiovascular simulation"
+    authors:
+      - family-names: Updegrove
+        given-names: Adam
+    journal: Annals of Biomedical Engineering
+    volume: 45
+    start: 525
+    end: 541
+    year: 2017
+    doi: 10.1007/s10439-016-1762-8

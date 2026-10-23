@@ -1,6 +1,6 @@
-# mysvOneDSolver – 1D airflow solver for the bronchial tree
+# 1D Solver for Respiratory Airflow Simulations with Distal Time-Dependent Boundary Conditions
 
-`mysvOneDSolver` computes air **pressure, flow and cross-sectional area** in a
+This solver computes air **pressure, flow and cross-sectional area** in a
 deformable 1D network of airways (trachea → terminal bronchi) over the
 breathing cycle.
 
@@ -17,7 +17,7 @@ cross-sectional area, solved with a finite element method. The changes for airwa
 The full list of changes is in [Changes with respect to svOneDSolver](#changes-with-respect-to-svonedsolver).
 
 > **Citation.** If you use this code, please cite the associated paper
-> (reference to be added) and the original SimVascular paper:
+> ([doi:10.46298/mbj.19176](https://doi.org/10.46298/mbj.19176)) and the original SimVascular paper:
 > Updegrove A. et al., *SimVascular: An open source pipeline for cardiovascular
 > simulation*, Annals of Biomedical Engineering 45:525–541 (2017),
 > doi:10.1007/s10439-016-1762-8.
@@ -27,7 +27,7 @@ The full list of changes is in [Changes with respect to svOneDSolver](#changes-w
 ## Contents
 
 ```
-mysvOneDSolver/
+1D-Solver-for-Respiratory-Airflow-Simulations-with-Distal-Time-Dependant-Boundary-Conditions/
 ├── CMakeLists.txt              build configuration
 ├── Code/Source/                C++ sources of the solver
 │   ├── main.cxx                reads the input file and starts the simulation
@@ -37,6 +37,7 @@ mysvOneDSolver/
 │   ├── cvOneDSubdomain.*       one airway segment (mesh, material, imposed flow)
 │   └── sparse/                 optional sparse linear solvers (csparse, superlu)
 ├── examples/bifurcation/       small test case (trachea + 2 bronchi)
+├── CITATION.cff                citation metadata
 └── LICENSE                     SimVascular license (MIT-style)
 ```
 
@@ -63,8 +64,8 @@ sudo apt-get install build-essential cmake python3-numpy
 Build in a separate folder:
 
 ```bash
-git clone https://github.com/<user>/mysvOneDSolver.git
-cd mysvOneDSolver
+git clone https://github.com/QuentinHerszkowicz/1D-Solver-for-Respiratory-Airflow-Simulations-with-Distal-Time-Dependant-Boundary-Conditions.git
+cd 1D-Solver-for-Respiratory-Airflow-Simulations-with-Distal-Time-Dependant-Boundary-Conditions
 mkdir build && cd build
 cmake ..
 make -j4
