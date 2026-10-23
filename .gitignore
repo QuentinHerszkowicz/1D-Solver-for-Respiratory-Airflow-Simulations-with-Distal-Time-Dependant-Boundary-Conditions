@@ -1,0 +1,22 @@
+# Build folders
+build/
+*_build/
+
+# Compiled files
+*.o
+*.a
+*.so
+
+# Solver outputs (generated when running a case)
+*.dat
+*.vtp
+*.vtk
+echo.out
+log.txt
+
+# Editors / OS
+*~
+*.swp
+.vscode/
+.DS_Store
+__pycache__/

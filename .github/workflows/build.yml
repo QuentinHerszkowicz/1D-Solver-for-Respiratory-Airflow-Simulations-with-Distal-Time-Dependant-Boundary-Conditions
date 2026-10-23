@@ -1,0 +1,29 @@
+name: build-and-test
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cmake g++ python3-numpy
+
+      - name: Build
+        run: |
+          mkdir build
+          cd build
+          cmake ..
+          make -j2
+
+      - name: Run example
+        working-directory: examples/bifurcation
+        run: |
+          ../../build/bin/OneDSolver bifurcation.in > log.txt
+          python3 check_results.py
